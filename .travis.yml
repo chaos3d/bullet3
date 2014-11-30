@@ -1,0 +1,13 @@
+language: objective-c
+script:
+- ./build_mac.sh
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: Cy2vjyPGuWhg50sxvGz5Kt5uUosU80np79Nrmjg+y8hwyMbLPCRPdzmBXLk9YAK9HxjrPgetXBaf8Ixk9FuiotKtgBTDxSzubOi82wgbzkvqPdgwVgCB5VBCoV06fO65xsS/UFu9ANOvvMQGbRGlGpHrOzUNBmOGmEDELA1+T5I=
+  file: libBulletAll.zip
+  on:
+    repo: chaos3d/bullet3
+    tags: true
+    all_branches: true
